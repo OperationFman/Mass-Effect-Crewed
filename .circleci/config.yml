@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - heroku/install
-      - run: heroku container:login
+#       - run: heroku container:login
       - run: heroku container:push -a $HEROKU_APP_NAME web
       - run: heroku container:release -a $HEROKU_APP_NAME web 
 
