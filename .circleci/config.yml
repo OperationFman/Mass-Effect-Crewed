@@ -5,11 +5,7 @@ orbs:
   heroku: circleci/heroku@1.2.4
 
 jobs:
-  test:
-    executor: node/default
-    steps:
-      - node/test
-  heroku-deploy
+  heroku-deploy:
     executor: heroku/default
     steps:
       - checkout
@@ -21,11 +17,11 @@ jobs:
 workflows:
   test-build-deploy:
     jobs:
-      - test
-      - heroku-deploy
-        requires:
-          - test
-        filters:
-          branches:
-            only:
-              - main
+      - node/test
+      - heroku-deploy:
+          requires:
+            - node/test
+          filters:
+            branches:
+              only: 
+                - main
