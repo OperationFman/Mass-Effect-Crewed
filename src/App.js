@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import AuthenticationButton from "./components/authentication-button";
 import Profile from "./components/show-name-test";
+import Header from "./components/header";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
@@ -9,11 +10,15 @@ function App() {
   
   if (isAuthenticated == false) {
     return (
-    <AuthenticationButton />
+      <React.Fragment>
+        <Header />
+        <AuthenticationButton />
+      </React.Fragment>
   )};
   return (
     <div className="App">
       <header className="App-header">
+        <Header />
         <AuthenticationButton />
         <Profile />
       </header>
