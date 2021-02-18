@@ -10,10 +10,10 @@ function App() {
   
   if (isAuthenticated == false) {
     return (
-      <React.Fragment>
-        <Header />
-        <AuthenticationButton />
-      </React.Fragment>
+        <header className="App-header">
+          <Header />
+          <AuthenticationButton />
+        </header>
   )};
   return (
     <div className="App">
