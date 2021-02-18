@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import AuthenticationButton from "./components/authentication-button";
 import Profile from "./components/show-name-test";
@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <AuthenticationButton />
         <Profile />
+        <AuthenticationButton />
       </header>
     </div>
   );
