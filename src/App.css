@@ -14,7 +14,8 @@
 
 .Main-buttons {
   padding: 4% !important;
-  width: 60% !important;
+  max-width: 75% !important;
+  margin: 10px !important;
 }
 
 .Log-out {
@@ -27,3 +28,8 @@
   margin: 50px !important;
 }
 
+.Mass-Effect-2 {
+  background-color: #BA602E !important;
+  border: 2px #BA602E !important;
+  color: white !important;
+}
