@@ -14,8 +14,11 @@
 
 .Main-buttons {
   padding: 4% !important;
-  margin: 100px !important;
   width: 60% !important;
+}
+
+.Log-out {
+  margin: 100px 0px 0px 0px !important;
 }
 
 .Header {
