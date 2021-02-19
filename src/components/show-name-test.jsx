@@ -8,8 +8,6 @@ const Profile = () => {
     return <div>Loading ...</div>;
   }
 
-  console.log('User Authentication: ' + isAuthenticated);
-
   return (
     isAuthenticated && (
       <div>
