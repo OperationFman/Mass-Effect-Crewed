@@ -6,10 +6,9 @@ const MassEffect1Button = () => {
   console.log(test);
     return (
     <button
-      className="btn btn-outline-primary btn-block mx-auto Main-buttons"
-      onClick={}
+      className="btn btn-primary btn-block mx-auto Main-buttons"
     >
-      Mass Effect 1
+      MASS EFFECT 1
     </button>
   );
 };

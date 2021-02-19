@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import AuthenticationButton from "./components/authentication-button";
-import Profile from "./components/show-name-test";
+import KingContent from "./components/king";
 import Header from "./components/header";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <Profile />
+        <KingContent />
         <AuthenticationButton />
       </header>
     </div>
