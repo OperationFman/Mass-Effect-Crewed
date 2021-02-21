@@ -8,6 +8,7 @@ When you've made your selection, hit confirm and those 2 crew mates will be circ
 You can add crew mates as you unlock them using the '+' icon and entering a name. By default they are sent to priority for a next pick.
 If a crew member dies/leaves, select the 'show more' drop down and tap them to delete.
 
+
 ## Installation
 To run on your local machine:
 * Clone or download this repo to your chosen directory.
@@ -15,6 +16,7 @@ To run on your local machine:
 * Open command prompt in this directory and type 'npm install'
 * Next type 'npm start'
 * To test, run 'npm test'
+
 
 ## Tech Stack
 * Javascript
