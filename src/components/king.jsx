@@ -19,7 +19,7 @@ class KingContent extends Component {
         const renderContent = () => {
             switch(this.state.content) {
                 case 'MassEffect1':
-                    return <Overview />
+                    return <Overview gameTitle='MassEffect1'/>
                 default:
                     return <GameSelect onLoadMassEffect1Click={this.handleLoadMassEffect1}/>
             };

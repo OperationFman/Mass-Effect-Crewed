@@ -4,7 +4,6 @@ import MassEffect2Button from './mass-effect2-button';
 import MassEffect3Button from './mass-effect3-button';
 
 class GameSelect extends Component {
-    state = {  }
     render() { 
         const { onLoadMassEffect1Click } = this.props;
         return ( 
