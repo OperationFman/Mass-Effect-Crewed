@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import GameSelect from './game-select'
 
 class KingContent extends Component {
+    state = {
+        content: 'gameSelect'
+    }
+    
     constructor() {
         super();
     };
 
     handleLoadMassEffect1 = () => {
-        console.log('king activated handler');
+        console.log('Mass Effect 1 Clicked');
     };
     
     render() { 
