@@ -5,7 +5,7 @@ class MassEffect1Button extends Component {
     return(
       <button
         className="btn btn-primary btn-block mx-auto Main-buttons"
-        onClick={() => this.props.onTest()}
+        onClick={() => this.props.onLoadMassEffect1Click()}
       >
         MASS EFFECT 1
       </button>

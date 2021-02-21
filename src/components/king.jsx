@@ -6,14 +6,14 @@ class KingContent extends Component {
         super();
     };
 
-    handleTest = () => {
+    handleLoadMassEffect1 = () => {
         console.log('king activated handler');
     };
     
     render() { 
         return (  
             <GameSelect 
-                onTest={this.handleTest}
+                onLoadMassEffect1Click={this.handleLoadMassEffect1}
             />
         );
     }
