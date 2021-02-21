@@ -6,9 +6,12 @@ import MassEffect3Button from './mass-effect3-button';
 class GameSelect extends Component {
     state = {  }
     render() { 
+        const { onTest } = this.props;
         return ( 
             <React.Fragment>
-                <MassEffect1Button />
+                <MassEffect1Button 
+                    onTest={onTest}
+                />
                 <MassEffect2Button />
                 <MassEffect3Button />
             </React.Fragment>
