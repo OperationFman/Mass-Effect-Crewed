@@ -9,9 +9,9 @@ class CrewReload extends Component {
         return (
             <div className='crew-reload-container'>
                 <div className='left-crew-options'>
-                    <h2>Crew1</h2>
+                    <h2>Tali</h2>
                     <div className='crew-divide-line'></div>
-                    <h2>Crew2</h2>
+                    <h2>Zaeed</h2>
                 </div>
                 <div className="right-refresh">
                     <button type="button" 
