@@ -16,7 +16,8 @@ class CrewReload extends Component {
                 <div className="right-refresh">
                     <button type="button" 
                         className="btn btn-outline-info"
-                        style={{textAlign:"center", height:"80%", width:"80%", margin:"10% 0% 10% 10%"}}
+                        style={{textAlign:"center", height:"90%", width:"100%", 
+                        fontSize:"calc(30px + 2vmin)"}}
                         >🗘</button>
                 </div>
             </div> 
