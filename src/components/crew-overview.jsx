@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import CrewReload from './2-crew-reload';
 
 class Overview extends Component {
-    state = {  }
+    state = {  
+        crew: ['Ashley', 'Kaiden', 'Liara', 'Wrex', 'Garrus', 'Tali']
+    };
     render() {
         const { gameTitle } = this.props;
         return ( 
             <div className="">
-                <CrewReload />
+                <CrewReload crew={this.state.crew}/>
                 <h1>You've selected: {gameTitle}</h1>
             </div>
         );
