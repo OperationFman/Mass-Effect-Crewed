@@ -4,7 +4,7 @@ class AddEnterForm extends Component {
     state = {  }
     render() { 
         return (  
-            <h1>This is the form</h1>
+            <input type="text" style={{width:"100%", height: "60px"}}></input>
         );
     }
 }
