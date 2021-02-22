@@ -14,12 +14,21 @@ class AddEnter extends Component {
     handleOpenForm = () => {
         this.setState({view: 'form'})
     }
+
+    handleAddCrewmate = () => {
+        this.setState({view: 'buttons'})
+    }
+
+    handleCancelAdd = () => {
+        this.setState({view: 'buttons'})
+    }
     
     render() { 
         const renderAddEnter = () => {
             switch(this.state.view) {
                 case 'form':
-                    return <AddEnterForm />
+                    return <AddEnterForm onAddCrewmate={this.handleAddCrewmate}
+                                         onCancelAdd={this.handleCancelAdd}/>
                 default:
                     return <AddEnterButtons onClickAddEnterForm={this.handleOpenForm}/>
             };
