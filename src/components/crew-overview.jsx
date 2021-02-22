@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CrewReload from './crew-reload';
 import AddEnter from './add-enter';
+import ShowCrew from './show-crew';
 
 class Overview extends Component {
     state = {  
@@ -12,6 +13,7 @@ class Overview extends Component {
             <div className="overview-container">
                 <CrewReload crew={this.state.crew}/>
                 <AddEnter crew={this.state.crew}/>
+                <ShowCrew crew={this.state.crew}/>
             </div>
         );
     }
