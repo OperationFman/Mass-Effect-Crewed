@@ -33,3 +33,21 @@
   border: 2px #BA602E !important;
   color: white !important;
 }
+
+.crew-reload-container {
+  display: flex;
+  max-width: 75%;
+  margin: 0% 12.5%;
+}
+
+.left-crew-options {
+  flex: 2;
+}
+
+.right-refresh {
+  flex: 1;
+}
+
+.crew-divide-line {
+  border-top: 1px solid black;
+}
