@@ -12,6 +12,7 @@ class AddEnterButtons extends Component {
             </button>
             <button
                 className="btn btn-outline-dark btn-block mx-auto Add-enter-buttons"
+                onClick={() => this.props.onClickAddEnterForm()}
             >
             +
             </button>
