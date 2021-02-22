@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CrewReload from './crew-reload';
+import AddEnter from './confirm-add-enter';
 
 class Overview extends Component {
     state = {  
@@ -8,9 +9,9 @@ class Overview extends Component {
     render() {
         const { gameTitle } = this.props;
         return ( 
-            <div className="">
+            <div className="overview-container">
                 <CrewReload crew={this.state.crew}/>
-                <h1>You've selected: {gameTitle}</h1>
+                <AddEnter />
             </div>
         );
     }
