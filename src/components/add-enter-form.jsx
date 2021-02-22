@@ -9,6 +9,7 @@ class AddEnterForm extends Component {
             <button
                 className="btn btn-primary btn-block mx-auto Add-enter-buttons"
                 style={{marginTop:"5%", width:"75%"}}
+                onClick={() => this.props.onCancelAdd()}
             >
             Add
             </button>
