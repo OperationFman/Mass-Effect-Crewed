@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import AddEnterButtons from './add-enter-buttons';
 
 class AddEnter extends Component {
     state = {  }
     render() { 
         return (  
-            <h1>Hello World!</h1>
+            <div className="add-enter-container">
+                <AddEnterButtons />
+            </div>
         );
     }
 }
