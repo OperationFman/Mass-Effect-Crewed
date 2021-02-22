@@ -49,10 +49,18 @@
   overflow: hidden;
 }
 
+.crew-divide-line {
+  border-top: 1px solid black;
+}
+
 .right-refresh {
   flex: 1;
 }
 
-.crew-divide-line {
-  border-top: 1px solid black;
+.add-enter-container {
+  padding-top: 10%;
+}
+
+.Add-enter-buttons {
+  padding: 4% !important;
 }
