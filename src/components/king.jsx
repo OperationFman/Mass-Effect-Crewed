@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GameSelect from './game-select'
-import Overview from './crew-overview'
+import Overview from './overview'
 
 class KingContent extends Component {
     state = {

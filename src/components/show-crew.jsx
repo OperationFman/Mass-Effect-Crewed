@@ -17,8 +17,9 @@ class ShowCrew extends Component {
                     return <ShowCrewList />
                 default: 
                     return <ShowCrewButton onClickShowCrew={this.handleShowCrew}/>
-            }
-        }
+            };
+        };
+        console.log(this.state.crew)
         
         return (  
             <div className="show-crew-container">
