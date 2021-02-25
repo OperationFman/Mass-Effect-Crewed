@@ -4,7 +4,7 @@ class CrewItem extends Component {
     state = {  }
     render() { 
         return ( 
-            <h1>Crew Mate</h1>
+            <h3>Crew Mate</h3>
         );
     }
 }
