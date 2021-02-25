@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import CrewItem from './show-crew-item';
 
 class ShowCrewlist extends Component {
     state = {  }
     render() { 
         return ( 
             <React.Fragment>
-            <h3>Crew</h3>
-            <h3>Crew2</h3>
-            <h3>Crew3</h3>
+            <CrewItem />
+            <CrewItem />
+            <CrewItem />
             </React.Fragment> 
         );
     }
