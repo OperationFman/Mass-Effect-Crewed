@@ -4,22 +4,24 @@ import ShowCrewList from './show-crew-list';
 
 class ShowCrew extends Component {
     state = {  
-        crewDetails: 'hidden'
-    }
+        crewDetails: 'hidden',
+    };
+    
     handleShowCrew = () => {
         this.setState({crewDetails: 'shown'})
     }
     
     render() { 
+        console.log(this.state.crew);
+        
         const renderShowCrew = () => {
             switch(this.state.crewDetails) {
                 case 'shown':
-                    return <ShowCrewList />
+                    return <ShowCrewList crew={this.state.crew}/>
                 default: 
                     return <ShowCrewButton onClickShowCrew={this.handleShowCrew}/>
             };
         };
-        console.log(this.state.crew)
         
         return (  
             <div className="show-crew-container">

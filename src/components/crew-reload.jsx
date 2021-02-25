@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class CrewReload extends Component {
     generateTwoCrew() {
-        console.log('Generate 2 Cerew Clicked');
+        console.log('Generate 2 Crew Clicked');
     }
 
     render() {  
