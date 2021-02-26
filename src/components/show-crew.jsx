@@ -12,12 +12,12 @@ class ShowCrew extends Component {
     }
     
     render() { 
-        console.log(this.state.crew);
+        const {crew} = this.props;
         
         const renderShowCrew = () => {
             switch(this.state.crewDetails) {
                 case 'shown':
-                    return <ShowCrewList crew={this.state.crew}/>
+                    return <ShowCrewList crew={crew}/>
                 default: 
                     return <ShowCrewButton onClickShowCrew={this.handleShowCrew}/>
             };

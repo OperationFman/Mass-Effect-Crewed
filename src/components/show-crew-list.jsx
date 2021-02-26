@@ -3,12 +3,13 @@ import CrewItem from './show-crew-item';
 
 class ShowCrewlist extends Component {
     state = {  }
-    render() { 
+    render() {
+        const {crew} = this.props;
         return ( 
             <React.Fragment>
-            <CrewItem />
-            <CrewItem />
-            <CrewItem />
+            <CrewItem crewmate={crew[0]}/>
+            <CrewItem crewmate={crew[1]}/>
+            <CrewItem crewmate={crew[2]}/>
             </React.Fragment> 
         );
     }

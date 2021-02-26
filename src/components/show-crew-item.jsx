@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 class CrewItem extends Component {
     state = {  }
-    render() { 
+    render() {
+        const {crewmate} = this.props;
         return ( 
-            <h3>Crew Mate</h3>
+            <h3>{crewmate}</h3>
         );
     }
 }
