@@ -10,6 +10,10 @@ class ShowCrew extends Component {
     handleShowCrew = () => {
         this.setState({crewDetails: 'shown'})
     }
+
+    handleHideCrew = () => {
+        this.setState({crewDetails: 'hidden'})
+    }
     
     render() { 
         const {crew} = this.props;
@@ -17,7 +21,8 @@ class ShowCrew extends Component {
         const renderShowCrew = () => {
             switch(this.state.crewDetails) {
                 case 'shown':
-                    return <ShowCrewList crew={crew}/>
+                    return <ShowCrewList crew={crew}
+                                         onClickHideCrew={this.handleHideCrew}/>
                 default: 
                     return <ShowCrewButton onClickShowCrew={this.handleShowCrew}/>
             };

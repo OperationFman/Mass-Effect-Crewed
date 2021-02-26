@@ -10,6 +10,10 @@ class ShowCrewlist extends Component {
             <CrewItem crewmate={crew[0]}/>
             <CrewItem crewmate={crew[1]}/>
             <CrewItem crewmate={crew[2]}/>
+            <button type="button" style={{marginTop:"10%"}}
+                className="btn btn-outline-dark"
+                onClick={() => this.props.onClickHideCrew()}>Hide Crew
+            </button>
             </React.Fragment> 
         );
     }
