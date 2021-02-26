@@ -5,7 +5,9 @@ class CrewItem extends Component {
     render() {
         const {crewmate} = this.props;
         return ( 
-            <h3>{crewmate}</h3>
+            <button type="Submit" 
+                    style={{marginTop:"5%"}}
+                    className="btn btn-outline-danger btn-block">{crewmate}</button>
         );
     }
 }
