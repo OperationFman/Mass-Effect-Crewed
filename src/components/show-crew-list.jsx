@@ -9,9 +9,9 @@ class ShowCrewlist extends Component {
 
         return ( 
             <React.Fragment>
-            {crew.map((crewmate) => {
-                return <CrewItem crewmate={crewmate}/>
-            })};
+            {crew.map((crewmate) => (
+                <CrewItem key={crewmate} crewmate={crewmate}/>
+            ))}
 
             <button type="button" style={{marginTop:"10%"}}
                 className="btn btn-outline-dark"
