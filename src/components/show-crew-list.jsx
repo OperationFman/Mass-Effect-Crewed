@@ -9,6 +9,11 @@ class ShowCrewlist extends Component {
 
         return ( 
             <React.Fragment>
+            <div className=""
+                 style={{color:"grey", fontSize:"75%"}}>
+                <p>Tap Name to Delete</p>
+            </div>
+
             {crew.map((crewmate) => (
                 <CrewItem key={crewmate} crewmate={crewmate}/>
             ))}

@@ -5,7 +5,22 @@ class CrewReload extends Component {
         console.log('Generate 2 Crew Clicked');
     }
 
-    render() {  
+    getLastFourCrewmates = () => {
+        const {crew} = this.props;
+        const lastFourCrewmates = []
+        lastFourCrewmates.push(crew[crew.length -1]);
+        lastFourCrewmates.push(crew[crew.length -2]);
+        lastFourCrewmates.push(crew[crew.length -3]);
+        lastFourCrewmates.push(crew[crew.length -4]);
+        return lastFourCrewmates;
+    };
+
+    getRandomTwoFromLastFourCrewmates = () => {
+        //lastFourCrewmates = getLastFourCrewmates();
+        //TODO
+    }
+
+    render() { 
         return (
             <div className='crew-reload-container'>
                 <div className='left-crew-options'>
