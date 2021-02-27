@@ -7,6 +7,11 @@ class Overview extends Component {
     state = {  
         crew: ['Ashley', 'Kaiden', 'Liara', 'Wrex', 'Garrus', 'Tali']
     };
+
+    handleSelectedCrew = () => {
+        console.log('handling crew from overview');
+    };
+
     render() {
         const { gameTitle } = this.props;
         return ( 
