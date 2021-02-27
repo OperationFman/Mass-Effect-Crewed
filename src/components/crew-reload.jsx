@@ -27,7 +27,6 @@ class CrewReload extends Component {
                         className="btn btn-outline-info"
                         style={{textAlign:"center", height:"90%", width:"100%", 
                         fontSize:"calc(30px + 2vmin)"}}
-                        onClick={() => this.getUnusedCrew()}
                         >🗘</button>
                 </div>
             </div> 
