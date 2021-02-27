@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class CrewReload extends Component {
-    generateTwoCrew() {
-        console.log('Generate 2 Crew Clicked');
-    }
-
     getUnusedCrew = () => {
         const localizeCrewList = this.props.crew;
         const selectLeastFour = localizeCrewList.slice(-4);
