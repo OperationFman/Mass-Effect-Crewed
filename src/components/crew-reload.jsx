@@ -5,24 +5,30 @@ class CrewReload extends Component {
         console.log('Generate 2 Crew Clicked');
     }
 
-    getLastFourCrewmates = () => {
-        const {crew} = this.props;
-        const lastFourCrewmates = []
-        lastFourCrewmates.push(crew[crew.length -1]);
-        lastFourCrewmates.push(crew[crew.length -2]);
-        lastFourCrewmates.push(crew[crew.length -3]);
-        lastFourCrewmates.push(crew[crew.length -4]);
-        return lastFourCrewmates;
+    getUnusedCrew = () => {
+        const localizeCrewList = this.props.crew;
+        const selectLeastFour = localizeCrewList.slice(-4);
+        const randomizer = Math.floor(Math.random() * selectLeastFour.length); 
+        const result = [selectLeastFour[randomizer], selectLeastFour[randomizer - 1]];
+        console.log(selectLeastFour);
+        console.log(result);
+        console.log(randomizer);
     };
-
-    getRandomTwoFromLastFourCrewmates = () => {
-        //lastFourCrewmates = getLastFourCrewmates();
-        //TODO
-    }
 
     render() { 
         return (
             <div className='crew-reload-container'>
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
+                {this.getUnusedCrew()}
                 <div className='left-crew-options'>
                     <h2>Tali</h2>
                     <div className='crew-divide-line'></div>
