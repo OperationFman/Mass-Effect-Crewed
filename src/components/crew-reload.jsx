@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import RefreshButton from './crew-reload-refresh';
 
 class CrewReload extends Component {
     state = {
         shownCrewmate1: '',
-        shownCrewmate2: ''
+        shownCrewmate2: '',
     }
     
     getUnusedCrew = () => {
@@ -20,6 +21,10 @@ class CrewReload extends Component {
         this.state.shownCrewmate2 = renderCrewNames[1];
     };
 
+    handleRefresh = () => {
+        this.forceUpdate();
+    };
+
     render() { 
         this.updateCrewState();
         return (
@@ -30,12 +35,13 @@ class CrewReload extends Component {
                     <h2>{this.state.shownCrewmate2}</h2>
                 </div>
                 <div className="right-refresh">
-                    <button type="button" 
-                        className="btn btn-outline-info"
-                        style={{textAlign:"center", height:"90%", width:"100%", 
-                        fontSize:"calc(30px + 2vmin)"}}
-                        onClick={this.updateCrewState()}
-                        >🗘</button>
+                <button type="button" 
+                    onClick={this.handleRefresh}
+                    className="btn btn-outline-info"
+                    style={{textAlign:"center", height:"90%", width:"100%", 
+                            fontSize:"calc(30px + 2vmin)"}}
+                    >🗘
+                </button>
                 </div>
             </div> 
         );
