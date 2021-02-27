@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class CrewReload extends Component {
     state = {
-        shownCrewmate1: 'Crew1',
-        shownCrewmate2: 'Crew2'
+        shownCrewmate1: '',
+        shownCrewmate2: ''
     }
     
     getUnusedCrew = () => {
