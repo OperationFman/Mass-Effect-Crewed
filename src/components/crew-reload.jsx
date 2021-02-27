@@ -17,8 +17,11 @@ class CrewReload extends Component {
 
     updateCrewState = () => {
         var renderCrewNames = this.getUnusedCrew();
-        this.state.shownCrewmate1 = renderCrewNames[0];
-        this.state.shownCrewmate2 = renderCrewNames[1];
+        if (renderCrewNames[0] == this.state.shownCrewmate1) {
+            this.updateCrewState();
+        }
+        console.log(this.state.shownCrewmate1 = renderCrewNames[0]);
+        console.log(this.state.shownCrewmate2 = renderCrewNames[1]);
     };
 
     handleRefresh = () => {
