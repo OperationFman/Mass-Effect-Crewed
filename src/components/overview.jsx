@@ -10,6 +10,23 @@ class Overview extends Component {
         shownCrewmate2: ''
     };
 
+    render() {
+        const { gameTitle } = this.props;
+        this.updateCrewState();
+        return ( 
+            <div className="overview-container">
+                <CrewReload crew={this.state.crew}
+                            shownCrewmate1={this.state.shownCrewmate1}
+                            shownCrewmate2={this.state.shownCrewmate2}
+                            updateCrewState={this.updateCrewState}
+                            handleRefresh={this.handleRefresh}
+                            />
+                <AddEnter crew={this.state.crew}/>
+                <ShowCrew crew={this.state.crew}/>
+            </div>
+        );
+    }
+
     getUnusedCrew = () => {
         const localizeCrewList = this.state.crew;
         const selectLeastFour = localizeCrewList.slice(-4);
@@ -27,23 +44,6 @@ class Overview extends Component {
     handleRefresh = () => {
         this.forceUpdate();
     };
-
-    render() {
-        const { gameTitle } = this.props;
-        this.updateCrewState();
-        return ( 
-            <div className="overview-container">
-                <CrewReload crew={this.state.crew}
-                            shownCrewmate1={this.state.shownCrewmate1}
-                            shownCrewmate2={this.state.shownCrewmate2}
-                            updateCrewState={this.updateCrewState}
-                            handleRefresh={this.handleRefresh}
-                            />
-                <AddEnter crew={this.state.crew}/>
-                <ShowCrew crew={this.state.crew}/>
-            </div>
-        );
-    }
 }
  
 export default Overview;
