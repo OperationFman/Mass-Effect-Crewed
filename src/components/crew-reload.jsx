@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import RefreshButton from './crew-reload-refresh';
 
 class CrewReload extends Component {
     state = {
