@@ -10,10 +10,6 @@ class Overview extends Component {
         shownCrewmate2: ''
     };
 
-    handleSelectedCrew = () => {
-        console.log('handling crew from overview');
-    };
-
     getUnusedCrew = () => {
         const localizeCrewList = this.state.crew;
         const selectLeastFour = localizeCrewList.slice(-4);
