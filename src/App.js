@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './Mobile.css';
 import AuthenticationButton from "./components/authentication-button";
 import KingContent from "./components/king";
 import Header from "./components/header";
