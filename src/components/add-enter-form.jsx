@@ -5,7 +5,9 @@ class AddEnterForm extends Component {
     render() { 
         return ( 
             <React.Fragment>
-            <input type="text" style={{width:"100%", height: "70px"}}></input>
+            <input type="text"
+                   style={{width:"100%", height: "70px", textAlign:"center", border:"1px solid grey"}}
+                   placeholder="Enter Name Here"></input>
             <button
                 className="btn btn-primary btn-block mx-auto Add-enter-buttons"
                 style={{marginTop:"5%", width:"75%"}}
