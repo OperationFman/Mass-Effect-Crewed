@@ -20,8 +20,7 @@ To run on your local machine:
 
 ## Tech Stack
 * Javascript
-* Firebase / Firestore
-* Node.Js
+* Node.Js / ExpressJS
 * React
 * Docker
 * CircleCI
