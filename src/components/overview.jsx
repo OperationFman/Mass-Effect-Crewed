@@ -12,6 +12,7 @@ class Overview extends Component {
 
     render() {
         const { gameTitle } = this.props;
+        console.log(gameTitle);
         this.updateCrewState();
         return ( 
             <div className="overview-container">
