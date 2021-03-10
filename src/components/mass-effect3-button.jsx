@@ -5,6 +5,7 @@ class MassEffect3Button extends Component {
     return(
       <button
         className="btn btn-danger btn-block mx-auto Main-buttons"
+        onClick={() => this.props.onLoadMassEffect3Click()}
       >
         MASS EFFECT 3
       </button>

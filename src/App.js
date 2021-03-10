@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <KingContent userId={user}/>
+        <KingContent userId={user.nickname}/>
         <AuthenticationButton />
       </header>
     </div>
