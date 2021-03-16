@@ -22,6 +22,6 @@ To run on your local machine:
 * Javascript
 * Node.Js / ExpressJS
 * React
-* Docker
+* Docker / Compile
 * CircleCI
 * Heroku
