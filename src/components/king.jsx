@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import GameSelect from './game-select'
 import Overview from './overview'
-import Loading from './loading'
+import Orbitals from './Orbitals/index'
 
 class KingContent extends Component {
     state = {
@@ -36,7 +36,7 @@ class KingContent extends Component {
         const renderContent = () => {
             switch(this.state.content) {
                 case 'loading':
-                    return <Loading />
+                    return <Orbitals />
                 case 'MassEffect1':
                     return <Overview gameTitle='MassEffect1'
                                      userId={this.props.userId}
