@@ -5,7 +5,7 @@ import ShowCrew from './show-crew';
 
 class Overview extends Component {
     state = {  
-        crew: ['Old1', 'Old2', 'Old3', 'Old4', 'Old5', 'Old6'],
+        crew: ['Old4', 'Old5', 'Old6'],
         shownCrewmate1: '',
         shownCrewmate2: ''
     };
