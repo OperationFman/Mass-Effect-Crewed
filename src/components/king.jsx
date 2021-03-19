@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import axios from "axios";
 import GameSelect from './game-select'
 import Overview from './overview'
+import Loading from './loading'
 
 class KingContent extends Component {
     state = {
-        content: 'gameSelect'
+        content: 'loading',
     }
     
     constructor() {
         super();
     };
+
+    loadSave = () => {
+        axios.get("https://mass-effect-crewed-backend.herokuapp.com/api/get/franklin.m.moon").then(response => {
+            console.log(response.data.userData);
+    });
+    }
 
     handleLoadMassEffect1 = () => {
         this.setState({ content: 'MassEffect1' })
@@ -24,8 +32,11 @@ class KingContent extends Component {
     };
     
     render() { 
+        this.loadSave();
         const renderContent = () => {
             switch(this.state.content) {
+                case 'loading':
+                    return <Loading />
                 case 'MassEffect1':
                     return <Overview gameTitle='MassEffect1'
                                      userId={this.props.userId}
