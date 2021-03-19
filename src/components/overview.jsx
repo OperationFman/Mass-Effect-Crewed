@@ -5,14 +5,18 @@ import ShowCrew from './show-crew';
 
 class Overview extends Component {
     state = {  
-        crew: ['Old4', 'Old5', 'Old6'],
+        crew: [],
         shownCrewmate1: '',
-        shownCrewmate2: ''
+        shownCrewmate2: '',
     };
 
-    render() {
+    componentDidMount() {
         const { gameTitle } = this.props;
-        console.log(gameTitle);
+        const { saveData } = this.props
+        this.setState({ crew: saveData[gameTitle] })
+    }
+
+    render() {
         this.updateCrewState();
         return ( 
             <div className="overview-container">
