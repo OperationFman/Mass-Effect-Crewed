@@ -7,15 +7,19 @@ import Orbitals from './Orbitals/index'
 class KingContent extends Component {
     state = {
         content: 'loading',
+        saveData: {}
     }
     
     constructor() {
         super();
     };
 
-    loadSave = () => {
-        axios.get("https://mass-effect-crewed-backend.herokuapp.com/api/get/franklin.m.moon").then(response => {
-            console.log(response.data.userData);
+    componentDidMount() {
+        let userId = this.props.userId
+        axios.get(`https://mass-effect-crewed-backend.herokuapp.com/api/get/${userId}`).then(response => {
+            this.setState({ saveData: response.data.userData })
+            this.setState({ content: 'gameSelect' })
+            console.log(this.state.saveData);
     });
     }
 
@@ -32,7 +36,6 @@ class KingContent extends Component {
     };
     
     render() { 
-        this.loadSave();
         const renderContent = () => {
             switch(this.state.content) {
                 case 'loading':
