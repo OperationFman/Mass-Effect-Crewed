@@ -19,7 +19,6 @@ class KingContent extends Component {
         axios.get(`https://mass-effect-crewed-backend.herokuapp.com/api/get/${userId}`).then(response => {
             this.setState({ saveData: response.data.userData })
             this.setState({ content: 'gameSelect' })
-            console.log(this.state.saveData);
     });
     }
 
@@ -43,14 +42,17 @@ class KingContent extends Component {
                 case 'MassEffect1':
                     return <Overview gameTitle='MassEffect1'
                                      userId={this.props.userId}
+                                     saveData={this.state.saveData}
                     />
                 case 'MassEffect2':
                     return <Overview gameTitle='MassEffect2'
                                      userId={this.props.userId}
+                                     saveData={this.state.saveData}
                     />
                 case 'MassEffect3':
                     return <Overview gameTitle='MassEffect3'
                                      userId={this.props.userId}
+                                     saveData={this.state.saveData}
                     />
                 default:
                     return <GameSelect onLoadMassEffect1Click={this.handleLoadMassEffect1}
