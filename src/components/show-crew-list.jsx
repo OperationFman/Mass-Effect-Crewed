@@ -5,7 +5,7 @@ class ShowCrewlist extends Component {
     state = {  }
 
     render() {
-        const {crew} = this.props;
+        const {crew, removeCrewmate} = this.props;
 
         return ( 
             <React.Fragment>
@@ -15,7 +15,10 @@ class ShowCrewlist extends Component {
             </div>
 
             {crew.map((crewmate) => (
-                <CrewItem key={crewmate} crewmate={crewmate}/>
+                <CrewItem key={crewmate} 
+                          crewmate={crewmate}
+                          removeCrewmate={removeCrewmate}
+                          />
             ))}
 
             <button type="button" style={{marginTop:"10%"}}
