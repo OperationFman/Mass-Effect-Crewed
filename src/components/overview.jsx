@@ -75,9 +75,7 @@ class Overview extends Component {
         this.setState({ shownCrewmate2: '...' });
     };
 
-    handleDelete = e => {
-        e.preventDefault();
-    
+    handleDelete = () => { 
         axios
           .post(`https://mass-effect-crewed-backend.herokuapp.com/api/update/${this.props.userId}`, this.state.crew)
           .catch(err => {
