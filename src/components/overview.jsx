@@ -52,7 +52,14 @@ class Overview extends Component {
     };
 
     removeCrewmate = (name) => {
-        console.log(name);
+        let getCrew = this.state.crew;
+        if (getCrew.length < 3) {
+            console.log('You need a minimum of 2 crew')
+        } else {
+            let index = getCrew.indexOf(name);
+            getCrew.splice(index, 1)
+            this.setState({ crew: getCrew })
+        }
     }
 
     updateCrewState = () => {
