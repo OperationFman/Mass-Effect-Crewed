@@ -16,12 +16,13 @@ class ShowCrew extends Component {
     }
     
     render() { 
-        const {crew} = this.props;
+        const {crew, removeCrewmate} = this.props;
         
         const renderShowCrew = () => {
             switch(this.state.crewDetails) {
                 case 'shown':
                     return <ShowCrewList crew={crew}
+                                         removeCrewmate={removeCrewmate}
                                          onClickHideCrew={this.handleHideCrew}/>
                 default: 
                     return <ShowCrewButton onClickShowCrew={this.handleShowCrew}/>
