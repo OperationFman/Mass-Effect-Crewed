@@ -12,7 +12,7 @@ class Overview extends Component {
 
     componentDidMount() {
         const { gameTitle } = this.props;
-        const { saveData } = this.props
+        const { saveData } = this.props;
         this.setState({ crew: saveData[gameTitle] })
     }
 

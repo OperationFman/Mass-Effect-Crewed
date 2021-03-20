@@ -5,7 +5,7 @@ import styles from './style.module.css'
 
 export default function Orbitals({ color, className, style }) {
   return (
-    <div classname="">
+    <div className="">
     <div className={classNames(styles['lds-orbitals'], className)} style={{ ...style }}>
       <div className={classNames(styles['center'])} style={{ background: color }}></div>
       <div className={classNames(styles['inner-spin'])}>
