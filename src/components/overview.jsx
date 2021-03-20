@@ -16,15 +16,8 @@ class Overview extends Component {
         return {crew: saveData[gameTitle] };
     }
 
-    // componentDidMount() {
-    //     const { gameTitle } = this.props;
-    //     const { saveData } = this.props
-    //     this.setState({ crew: saveData[gameTitle] })
-    // }
-
     render() {
         this.updateCrewState();
-        console.log(this.state.crew);
         return ( 
             <div className="overview-container">
                 <CrewReload crew={this.state.crew}
@@ -54,7 +47,7 @@ class Overview extends Component {
     };
 
     handleRefresh = () => {
-        this.forceUpdate();
+        this.setState({ shownCrewmate1: '...' })
     };
 }
  
