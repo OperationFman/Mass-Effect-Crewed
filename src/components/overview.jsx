@@ -77,7 +77,7 @@ class Overview extends Component {
 
     handleDelete = () => { 
         axios
-          .post(`https://mass-effect-crewed-backend.herokuapp.com/api/update/${this.props.userId}`, this.state.crew)
+          .post(`https://mass-effect-crewed-backend.herokuapp.com/api/update/${this.props.userId}`, this.props.saveData)
           .catch(err => {
             console.error(err);
           });
