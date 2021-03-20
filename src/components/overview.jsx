@@ -27,7 +27,9 @@ class Overview extends Component {
                             handleRefresh={this.handleRefresh}
                             />
                 <AddEnter crew={this.state.crew}/>
-                <ShowCrew crew={this.state.crew}/>
+                <ShowCrew crew={this.state.crew}
+                          removeCrewmate={this.removeCrewmate}
+                            />
             </div>
         );
     }
@@ -48,6 +50,10 @@ class Overview extends Component {
         }
         return result
     };
+
+    removeCrewmate = (name) => {
+        console.log(name);
+    }
 
     updateCrewState = () => {
         var renderCrewNames = this.getUnusedCrew();
