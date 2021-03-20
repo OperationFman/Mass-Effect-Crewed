@@ -37,6 +37,7 @@ class Overview extends Component {
         const selectLeastFour = localizeCrewList.slice(-4);
         const randomizer = Math.floor(Math.random() * (selectLeastFour.length - 1) + 1);
         const result = [selectLeastFour[randomizer], selectLeastFour[randomizer -1]];
+        console.log(result);
         return result;
     };
 
@@ -44,10 +45,13 @@ class Overview extends Component {
         var renderCrewNames = this.getUnusedCrew();
         this.state.shownCrewmate1 = renderCrewNames[0];
         this.state.shownCrewmate2 = renderCrewNames[1];
+        console.log(this.state.shownCrewmate1);
+        console.log(this.state.shownCrewmate2);
     };
 
     handleRefresh = () => {
         this.setState({ shownCrewmate1: '...' })
+        console.log(this.state.shownCrewmate1);
     };
 }
  
