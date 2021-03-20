@@ -56,8 +56,8 @@ class Overview extends Component {
     };
 
     handleRefresh = () => {
-        this.setState({ shownCrewmate1: '...' })
-        this.setState({ shownCrewmate2: '...' })
+        this.setState({ shownCrewmate1: '...' });
+        this.setState({ shownCrewmate2: '...' });
     };
 }
  
