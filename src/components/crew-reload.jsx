@@ -13,9 +13,9 @@ class CrewReload extends Component {
                 <button type="button" 
                     onClick={this.props.handleRefresh}
                     className="btn btn-outline-info"
-                    style={{textAlign:"center", height:"90%", width:"100%", 
+                    style={{textAlign:"center", height:"100%", width:"100%", 
                             fontSize:"calc(30px + 2vmin)"}}
-                    >🗘
+                    >⟳
                 </button>
                 </div>
             </div> 
