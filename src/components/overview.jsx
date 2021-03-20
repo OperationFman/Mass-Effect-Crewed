@@ -10,14 +10,21 @@ class Overview extends Component {
         shownCrewmate2: '',
     };
 
-    componentDidMount() {
-        const { gameTitle } = this.props;
-        const { saveData } = this.props;
-        this.setState({ crew: saveData[gameTitle] })
+    static getDerivedStateFromProps(props, state) {
+        const { gameTitle } = props;
+        const { saveData } = props
+        return {crew: saveData[gameTitle] };
     }
+
+    // componentDidMount() {
+    //     const { gameTitle } = this.props;
+    //     const { saveData } = this.props
+    //     this.setState({ crew: saveData[gameTitle] })
+    // }
 
     render() {
         this.updateCrewState();
+        console.log(this.state.crew);
         return ( 
             <div className="overview-container">
                 <CrewReload crew={this.state.crew}
