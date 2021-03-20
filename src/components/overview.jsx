@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import CrewReload from './crew-reload';
 import AddEnter from './add-enter';
 import ShowCrew from './show-crew';
@@ -59,6 +60,7 @@ class Overview extends Component {
             let index = getCrew.indexOf(name);
             getCrew.splice(index, 1)
             this.setState({ crew: getCrew })
+            this.handleDelete()
         }
     }
 
@@ -72,6 +74,16 @@ class Overview extends Component {
         this.setState({ shownCrewmate1: '...' });
         this.setState({ shownCrewmate2: '...' });
     };
+
+    handleDelete = e => {
+        e.preventDefault();
+    
+        axios
+          .post(`https://mass-effect-crewed-backend.herokuapp.com/api/update/${this.props.userId}`, this.state.crew)
+          .catch(err => {
+            console.error(err);
+          });
+      };
 }
  
 export default Overview;
