@@ -35,23 +35,29 @@ class Overview extends Component {
     getUnusedCrew = () => {
         const localizeCrewList = this.state.crew;
         const selectLeastFour = localizeCrewList.slice(-4);
-        const randomizer = Math.floor(Math.random() * (selectLeastFour.length - 1) + 1);
-        const result = [selectLeastFour[randomizer], selectLeastFour[randomizer -1]];
-        console.log(result);
-        return result;
+        let result = [];
+        // If crew == 2, return them, if == 3 randomly return 2, if 4+ return 2 of the last 4
+        if (selectLeastFour == 2) {
+            result = selectLeastFour
+        } else if (selectLeastFour == 3) {
+            const randomizerOfThree = Math.floor(Math.random() * 2);
+            result = [selectLeastFour[randomizerOfThree], selectLeastFour[randomizerOfThree + 1]];
+        } else {
+            const randomizer = Math.floor(Math.random() * (selectLeastFour.length - 1) + 1);
+            result = [selectLeastFour[randomizer], selectLeastFour[randomizer -1]];
+        }
+        return result
     };
 
     updateCrewState = () => {
         var renderCrewNames = this.getUnusedCrew();
         this.state.shownCrewmate1 = renderCrewNames[0];
         this.state.shownCrewmate2 = renderCrewNames[1];
-        console.log(this.state.shownCrewmate1);
-        console.log(this.state.shownCrewmate2);
     };
 
     handleRefresh = () => {
         this.setState({ shownCrewmate1: '...' })
-        console.log(this.state.shownCrewmate1);
+        this.setState({ shownCrewmate2: '...' })
     };
 }
  
