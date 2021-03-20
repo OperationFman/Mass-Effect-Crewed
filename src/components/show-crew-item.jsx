@@ -7,7 +7,9 @@ class CrewItem extends Component {
         return ( 
             <button type="Submit" 
                     style={{marginTop:"5%"}}
-                    className="btn btn-outline-danger btn-block">{crewmate}</button>
+                    className="btn btn-outline-danger btn-block"
+                    onClick={() => this.props.removeCrewmate(crewmate)}>{crewmate}
+                    </button>
         );
     }
 }
