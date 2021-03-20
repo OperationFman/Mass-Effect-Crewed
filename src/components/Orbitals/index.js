@@ -5,6 +5,7 @@ import styles from './style.module.css'
 
 export default function Orbitals({ color, className, style }) {
   return (
+    <div classname="">
     <div className={classNames(styles['lds-orbitals'], className)} style={{ ...style }}>
       <div className={classNames(styles['center'])} style={{ background: color }}></div>
       <div className={classNames(styles['inner-spin'])}>
@@ -47,6 +48,8 @@ export default function Orbitals({ color, className, style }) {
         <div className={classNames(styles['outer-moon-a'])} style={{ background: color }}></div>
         <div className={classNames(styles['outer-moon-b'])} style={{ background: color }}></div>
       </div>
+    </div>
+    <h1>Loading...</h1>
     </div>
   )
 }
