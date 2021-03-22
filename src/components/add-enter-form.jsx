@@ -30,6 +30,8 @@ class AddEnterForm extends Component {
                     value="Add"
                     className="btn btn-primary btn-block mx-auto Add-enter-buttons"
                     style={{marginTop:"5%", width:"75%"}}
+            />
+
             <button
                 className="btn btn-secondary btn-block mx-auto Add-enter-buttons"
                 style={{width:"75%"}}
@@ -37,6 +39,7 @@ class AddEnterForm extends Component {
             >
             Cancel
             </button>
+            </form> 
         );
     }
 }
