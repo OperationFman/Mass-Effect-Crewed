@@ -85,8 +85,8 @@ class Overview extends Component {
           });
       };
 
-    handleAddCrew = () => {
-        console.log('Add Crew Clicked!');
+    handleAddCrew = (name) => {
+        console.log(name);
     };
 }
  

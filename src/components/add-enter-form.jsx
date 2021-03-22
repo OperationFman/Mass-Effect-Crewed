@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 class AddEnterForm extends Component {
-    state = {  }
-    
-    onClick() {
-        this.props.onCancelAdd()
-        this.props.addCrew()
+    constructor(props) {
+        super(props)
+        this.state = {formValue: ''};
+        this.handleChange = this.handleChange.bind(this);
     }
     
     render() { 
@@ -29,7 +28,6 @@ class AddEnterForm extends Component {
             >
             Cancel
             </button>
-            </React.Fragment> 
         );
     }
 }
