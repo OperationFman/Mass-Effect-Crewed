@@ -28,7 +28,8 @@ class AddEnter extends Component {
             switch(this.state.view) {
                 case 'form':
                     return <AddEnterForm onAddCrewmate={this.handleAddCrewmate}
-                                         onCancelAdd={this.handleCancelAdd}/>
+                                         onCancelAdd={this.handleCancelAdd}
+                                         addCrew={this.props.addCrew}/>
                 default:
                     return <AddEnterButtons onClickAddEnterForm={this.handleOpenForm}/>
             };
