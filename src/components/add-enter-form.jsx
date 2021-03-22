@@ -7,6 +7,16 @@ class AddEnterForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
     
+    handleChange(event) {
+        this.setState({formValue: event.target.value});
+      }
+
+    onAddClick(event) {
+        event.preventDefault();
+        this.props.onCancelAdd();
+        this.props.addCrew(this.state.formValue);
+    }
+  
     render() { 
         return ( 
             <React.Fragment>
