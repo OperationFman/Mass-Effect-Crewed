@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 
 class AddEnterForm extends Component {
     state = {  }
+    
+    onClick() {
+        this.props.onCancelAdd()
+        this.props.addCrew()
+    }
+    
     render() { 
         return ( 
             <React.Fragment>
@@ -11,10 +17,11 @@ class AddEnterForm extends Component {
             <button
                 className="btn btn-primary btn-block mx-auto Add-enter-buttons"
                 style={{marginTop:"5%", width:"75%"}}
-                onClick={() => this.props.onCancelAdd()}
+                onClick={() => this.onClick()}
             >
             Add
             </button>
+            
             <button
                 className="btn btn-secondary btn-block mx-auto Add-enter-buttons"
                 style={{width:"75%"}}
