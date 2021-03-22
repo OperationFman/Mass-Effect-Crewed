@@ -27,7 +27,9 @@ class Overview extends Component {
                             updateCrewState={this.updateCrewState}
                             handleRefresh={this.handleRefresh}
                             />
-                <AddEnter crew={this.state.crew}/>
+                <AddEnter crew={this.state.crew}
+                            addCrew={this.handleAddCrew}
+                            />
                 <ShowCrew crew={this.state.crew}
                           removeCrewmate={this.removeCrewmate}
                             />
@@ -82,6 +84,10 @@ class Overview extends Component {
             console.error(err);
           });
       };
+
+    handleAddCrew = () => {
+        console.log('Add Crew Clicked!');
+    };
 }
  
 export default Overview;
