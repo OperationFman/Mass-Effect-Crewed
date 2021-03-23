@@ -7,8 +7,8 @@ import ShowCrew from './show-crew';
 class Overview extends Component {
     state = {  
         crew: [],
-        shownCrewmate1: '',
-        shownCrewmate2: '',
+        shownCrewmate1: 'Refresh',
+        shownCrewmate2: 'To Start',
     };
 
     static getDerivedStateFromProps(props) {
@@ -18,7 +18,6 @@ class Overview extends Component {
     }
 
     render() {
-        this.updateCrewState();
         return ( 
             <div className="overview-container">
                 <CrewReload crew={this.state.crew}
@@ -28,6 +27,7 @@ class Overview extends Component {
                             handleRefresh={this.handleRefresh}
                             />
                 <AddEnter crew={this.state.crew}
+                          handleConfirm={this.handleConfirm}
                           addCrew={this.handleAddCrew}
                             />
                 <ShowCrew crew={this.state.crew}
@@ -68,13 +68,8 @@ class Overview extends Component {
 
     updateCrewState = () => {
         var renderCrewNames = this.getUnusedCrew();
-        this.state.shownCrewmate1 = renderCrewNames[0];
-        this.state.shownCrewmate2 = renderCrewNames[1];
-    };
-
-    handleRefresh = () => {
-        this.setState({ shownCrewmate1: '...' });
-        this.setState({ shownCrewmate2: '...' });
+        this.setState({shownCrewmate1: renderCrewNames[0]});
+        this.setState({shownCrewmate2: renderCrewNames[1]});
     };
 
     handleUpdateBackend = () => { 
