@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class CrewReload extends Component {
+    
     render() { 
         return (
             <div className='crew-reload-container'>
@@ -11,7 +12,7 @@ class CrewReload extends Component {
                 </div>
                 <div className="right-refresh">
                 <button type="button" 
-                    onClick={this.props.handleRefresh}
+                    onClick={this.props.updateCrewState}
                     className="btn btn-outline-info"
                     style={{textAlign:"center", height:"100%", width:"100%", 
                             fontSize:"calc(30px + 2vmin)"}}
