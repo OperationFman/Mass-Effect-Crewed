@@ -31,7 +31,8 @@ class AddEnter extends Component {
                                          onCancelAdd={this.handleCancelAdd}
                                          addCrew={this.props.addCrew}/>
                 default:
-                    return <AddEnterButtons onClickAddEnterForm={this.handleOpenForm}/>
+                    return <AddEnterButtons onClickAddEnterForm={this.handleOpenForm}
+                                            handleConfirm={this.props.handleConfirm}/>
             };
         };
         
