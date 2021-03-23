@@ -20,6 +20,7 @@ class AddEnterForm extends React.Component {
             <input  type="text" 
                     name="newName"
                     placeholder='Enter Name Here'
+                    autoComplete="off"
                     style={{width:"100%", height: "70px", textAlign:"center", border:"1px solid grey"}}/>
     
             <button className="btn btn-primary btn-block mx-auto Add-enter-buttons"
