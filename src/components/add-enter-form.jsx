@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 class AddEnterForm extends Component {
+    state = {
+        formValue: ''
+    }
+    
     constructor(props) {
         super(props)
-        this.state = {formValue: ''};
         this.handleChange = this.handleChange.bind(this);
     }
     
@@ -13,13 +16,14 @@ class AddEnterForm extends Component {
 
     onAddClick(event) {
         event.preventDefault();
-        this.props.onCancelAdd();
-        this.props.addCrew(this.state.formValue);
+        // console.log(this.state);
+        // this.props.onCancelAdd();
+        // this.props.addCrew(this.state.formValue);
     }
   
     render() { 
         return ( 
-            <form onSubmit={this.onAddClick}>
+            <form onSubmit={this.onAddClick()}>
             <input  type="text"
                     value={this.state.formValue}
                     onChange={this.handleChange}
