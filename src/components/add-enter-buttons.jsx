@@ -7,6 +7,7 @@ class AddEnterButtons extends Component {
             <React.Fragment>
             <button
                 className="btn btn-primary btn-block mx-auto Add-enter-buttons"
+                onClick={this.props.handleConfirm}
             >
             Confirm
             </button>
