@@ -1,49 +1,42 @@
 import React, { Component } from 'react';
 
 class AddEnterForm extends Component {
-    state = {
-        formValue: ''
-    }
+    constructor() {
+        super();
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
     
-    constructor(props) {
-        super(props)
-        this.handleChange = this.handleChange.bind(this);
-    }
-    
-    handleChange(event) {
-        this.setState({formValue: event.target.value});
+    handleSubmit(event) {
+        // event.preventDefault();
+        // const data = new FormData(event.target);
+        console.log(event);
+
       }
 
-    onAddClick(event) {
-        event.preventDefault();
-        // console.log(this.state);
-        // this.props.onCancelAdd();
-        // this.props.addCrew(this.state.formValue);
-    }
-  
     render() { 
         return ( 
-            <form onSubmit={this.onAddClick()}>
-            <input  type="text"
-                    value={this.state.formValue}
-                    onChange={this.handleChange}
-                    placeholder='Enter Name Here'
-                    style={{width:"100%", height: "70px", textAlign:"center", border:"1px solid grey"}}
-            ></input>
-            <input  type="submit"
-                    value="Add"
-                    className="btn btn-primary btn-block mx-auto Add-enter-buttons"
-                    style={{marginTop:"5%", width:"75%"}}
-            />
+            <div className="">
+                <form onSubmit={this.handleSubmit}>
+                    <input  type="text"
+                            placeholder='Enter Name Here'
+                            style={{width:"100%", height: "70px", textAlign:"center", border:"1px solid grey"}}
+                    ></input>
+                    <button  type="button"
+                            className="btn btn-primary btn-block mx-auto Add-enter-buttons"
+                            style={{marginTop:"5%", width:"75%"}}
+                    >
+                    Add
+                    </button>
+                </form> 
 
-            <button
-                className="btn btn-secondary btn-block mx-auto Add-enter-buttons"
-                style={{width:"75%"}}
-                onClick={() => this.props.onAddCrewmate()}
-            >
-            Cancel
-            </button>
-            </form> 
+                <button
+                    className="btn btn-secondary btn-block mx-auto Add-enter-buttons"
+                    style={{width:"75%", marginTop:"5%"}}
+                    onClick={() => this.props.onAddCrewmate()}
+                >
+                Cancel
+                </button>
+            </div>
         );
     }
 }
