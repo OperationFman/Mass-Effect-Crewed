@@ -11,7 +11,7 @@ class Overview extends Component {
         shownCrewmate2: '',
     };
 
-    static getDerivedStateFromProps(props, state) {
+    static getDerivedStateFromProps(props) {
         const { gameTitle } = props;
         const { saveData } = props
         return {crew: saveData[gameTitle] };
