@@ -7,11 +7,6 @@ class AddEnterForm extends React.Component {
     }
   
     handleSubmit(event) {
-        // event.preventDefault();
-        // const data = new FormData(event.target);
-        console.log(event);
-
-      }
 
     render() { 
         return ( 
@@ -28,6 +23,11 @@ class AddEnterForm extends React.Component {
                     Add
                     </button>
                 </form> 
+      event.preventDefault();
+      const data = new FormData(event.target);
+      this.props.addCrew(data.get('newName'));
+      this.props.onAddCrewmate() //This actually closes it, Refactor to say so
+    }
 
                 <button
                     className="btn btn-secondary btn-block mx-auto Add-enter-buttons"
