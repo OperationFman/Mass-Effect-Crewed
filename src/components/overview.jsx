@@ -28,7 +28,7 @@ class Overview extends Component {
                             handleRefresh={this.handleRefresh}
                             />
                 <AddEnter crew={this.state.crew}
-                            addCrew={this.handleAddCrew}
+                          addCrew={this.handleAddCrew}
                             />
                 <ShowCrew crew={this.state.crew}
                           removeCrewmate={this.removeCrewmate}

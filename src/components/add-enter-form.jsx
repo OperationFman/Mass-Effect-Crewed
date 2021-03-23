@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class AddEnterForm extends Component {
+class AddEnterForm extends React.Component {
     constructor() {
-        super();
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-    
+      super();
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+  
     handleSubmit(event) {
         // event.preventDefault();
         // const data = new FormData(event.target);
@@ -39,6 +39,6 @@ class AddEnterForm extends Component {
             </div>
         );
     }
-}
- 
-export default AddEnterForm;
+  }
+
+export default AddEnterForm
