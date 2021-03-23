@@ -37,6 +37,23 @@ class Overview extends Component {
         );
     }
 
+    handleConfirm = () => {
+        if (this.state.shownCrewmate1 != 'Refresh') {
+            let getCrew = this.state.crew;
+            const crew1Index = getCrew.indexOf(this.state.shownCrewmate1);
+            getCrew.splice(crew1Index, 1)
+            const crew2Index = getCrew.indexOf(this.state.shownCrewmate2);
+            getCrew.splice(crew2Index, 1)
+            getCrew.splice(0, 0, this.state.shownCrewmate1)
+            getCrew.splice(0, 0, this.state.shownCrewmate2)
+            console.log(getCrew);
+            this.setState({ crew: getCrew })
+            this.handleUpdateBackend()
+        } else {
+            console.log("'Refresh' and 'To Start' aren't crew fam");
+        }
+    }
+
     getUnusedCrew = () => {
         const localizeCrewList = this.state.crew;
         const selectLeastFour = localizeCrewList.slice(-4);
