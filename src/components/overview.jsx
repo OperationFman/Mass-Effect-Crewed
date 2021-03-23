@@ -62,7 +62,7 @@ class Overview extends Component {
             let index = getCrew.indexOf(name);
             getCrew.splice(index, 1)
             this.setState({ crew: getCrew })
-            this.handleDelete()
+            this.handleUpdateBackend()
         }
     }
 
@@ -77,7 +77,7 @@ class Overview extends Component {
         this.setState({ shownCrewmate2: '...' });
     };
 
-    handleDelete = () => { 
+    handleUpdateBackend = () => { 
         axios
           .post(`https://mass-effect-crewed-backend.herokuapp.com/api/update/${this.props.userId}`, this.props.saveData)
           .catch(err => {
@@ -86,7 +86,10 @@ class Overview extends Component {
       };
 
     handleAddCrew = (name) => {
-        console.log(name);
+        let getCrew = this.state.crew;
+        getCrew.push(name);
+        this.setState({ crew: getCrew })
+        this.handleUpdateBackend()
     };
 }
  
