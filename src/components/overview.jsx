@@ -19,6 +19,7 @@ class Overview extends Component {
 
     render() {
         return ( 
+            <React.Fragment>
             <div className="overview-container">
                 <CrewReload crew={this.state.crew}
                             shownCrewmate1={this.state.shownCrewmate1}
@@ -33,8 +34,13 @@ class Overview extends Component {
                 <ShowCrew crew={this.state.crew}
                           removeCrewmate={this.removeCrewmate}
                             />
-                <button onClick={this.refreshPage}>Back</button>
             </div>
+            <button type="button" 
+                    className="btn btn-primary btn-block mx-auto Main-buttons"
+                    style={{width:"100%"}}
+                    onClick={this.refreshPage}>Back
+            </button>
+        </React.Fragment>
         );
     }
 
@@ -108,7 +114,7 @@ class Overview extends Component {
             this.handleUpdateBackend()
         }
     };
-    
+
     refreshPage = () => {
         window.location.reload();
      }
