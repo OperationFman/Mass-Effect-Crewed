@@ -99,9 +99,13 @@ class Overview extends Component {
 
     handleAddCrew = (name) => {
         let getCrew = this.state.crew;
-        getCrew.push(name);
-        this.setState({ crew: getCrew })
-        this.handleUpdateBackend()
+        if (getCrew.includes(name)) {
+            console.log('Name exists');
+        } else {
+            getCrew.push(name);
+            this.setState({ crew: getCrew })
+            this.handleUpdateBackend()
+        }
     };
 }
  
