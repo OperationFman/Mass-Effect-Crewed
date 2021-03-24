@@ -87,6 +87,7 @@ class Overview extends Component {
             getCrew.splice(index, 1)
             this.setState({ crew: getCrew })
             this.handleUpdateBackend()
+            this.updateCrewState()
         }
     }
 
@@ -112,6 +113,7 @@ class Overview extends Component {
             getCrew.push(name);
             this.setState({ crew: getCrew })
             this.handleUpdateBackend()
+            this.updateCrewState()
         }
     };
 
