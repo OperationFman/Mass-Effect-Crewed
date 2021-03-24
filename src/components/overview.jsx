@@ -46,7 +46,6 @@ class Overview extends Component {
             getCrew.splice(crew2Index, 1)
             getCrew.splice(0, 0, this.state.shownCrewmate1)
             getCrew.splice(0, 0, this.state.shownCrewmate2)
-            console.log(getCrew);
             this.setState({ crew: getCrew })
             this.handleUpdateBackend()
         } else {
