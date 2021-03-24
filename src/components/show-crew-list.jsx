@@ -6,7 +6,6 @@ class ShowCrewlist extends Component {
 
     render() {
         const {crew, removeCrewmate} = this.props;
-
         return ( 
             <React.Fragment>
             <div className=""
