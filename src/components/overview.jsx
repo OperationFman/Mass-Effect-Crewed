@@ -38,7 +38,7 @@ class Overview extends Component {
             <button type="button" 
                     className="btn btn-outline-dark btn-block Main-buttons Back-Button"
                     style={{width:"100%"}}
-                    onClick={this.refreshPage}>Back
+                    onClick={this.refreshPage}>Return
             </button>
         </React.Fragment>
         );
