@@ -33,6 +33,7 @@ class Overview extends Component {
                 <ShowCrew crew={this.state.crew}
                           removeCrewmate={this.removeCrewmate}
                             />
+                <button onClick={this.refreshPage}>Back</button>
             </div>
         );
     }
@@ -107,6 +108,10 @@ class Overview extends Component {
             this.handleUpdateBackend()
         }
     };
+    
+    refreshPage = () => {
+        window.location.reload();
+     }
 }
  
 export default Overview;
