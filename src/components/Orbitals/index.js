@@ -50,6 +50,7 @@ export default function Orbitals({ color, className, style }) {
       </div>
     </div>
     <h1>Loading...</h1>
+    <br></br><br></br>
     </div>
   )
 }
