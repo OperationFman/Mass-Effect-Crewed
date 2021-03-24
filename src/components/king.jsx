@@ -65,6 +65,7 @@ class KingContent extends Component {
         return (
             <React.Fragment>
                 {renderContent()}
+                <br></br><br></br>
             </React.Fragment>
         );
     }
