@@ -48,6 +48,7 @@ class Overview extends Component {
             getCrew.splice(0, 0, this.state.shownCrewmate2)
             this.setState({ crew: getCrew })
             this.handleUpdateBackend()
+            this.updateCrewState()
         } else {
             console.log("'Refresh' and 'To Start' aren't crew fam");
         }
