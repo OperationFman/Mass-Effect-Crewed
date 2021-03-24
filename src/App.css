@@ -30,6 +30,10 @@
   color: white !important;
 }
 
+.Back-Button {
+  margin: 100px 0px 0px 0px !important;
+}
+
 .overview-container {
   width: 75%;
   margin: 0% 12.5%;
