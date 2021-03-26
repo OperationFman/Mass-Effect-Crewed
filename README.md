@@ -8,9 +8,12 @@ When you've made your selection, hit confirm and those 2 crew mates will be circ
 You can add crew mates as you unlock them using the '+' icon and entering a name. By default they are sent to priority for a next pick.
 If a crew member dies/leaves, select the 'show more' drop down and tap them to delete.
 
+
 ## Why?
 I wanted to learn ReactJS, user-session and refine my continuous deployment skills.
+
 Besides the initial Authentication the entire app never reloads and maintains unique user data.
+
 
 ## Installation
 To run on your local machine:
