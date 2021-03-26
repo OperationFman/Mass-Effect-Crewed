@@ -12,7 +12,7 @@ If a crew member dies/leaves, select the 'show more' drop down and tap them to d
 ## Why?
 I wanted to learn ReactJS, user-session and refine my continuous deployment skills.
 
-Besides the initial Authentication the entire app never reloads and maintains unique user data.
+Besides the initial authentication the entire app never reloads and maintains unique user data.
 
 
 ## Installation
