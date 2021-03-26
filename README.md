@@ -2,7 +2,10 @@
 Mass Effect Crewed is a micro-app to easily see which crewmates you havn't picked recently, for each Mass Effect game in the trilogy.
 
 Simply login and select which game you're playing.
+
 ![Login](https://user-images.githubusercontent.com/42459707/112561197-d0550180-8e28-11eb-970d-b1c2468d619e.PNG)
+![login2](https://user-images.githubusercontent.com/42459707/112561287-08f4db00-8e29-11eb-8a62-a525f2c86987.PNG)
+![MainMenu](https://user-images.githubusercontent.com/42459707/112561304-0f835280-8e29-11eb-97ba-0c7994b67848.PNG)
 
 2 of the 4 crewmates you havnt picked for the longest time will randomly be shown to you, you can re-shuffle these four with the spinning-arrow icon.
 When you've made your selection, hit confirm and those 2 crew mates will be circulated to the back of the crew waitlist.
