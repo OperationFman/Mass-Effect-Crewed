@@ -1,7 +1,14 @@
 ## Context
 Mass Effect Crewed is a micro-app to easily see which crewmates you havn't picked recently, for each Mass Effect game in the trilogy.
 
-Simply login and select which game you're playing.
+The final product can be used here:
+https://mass-effect-crewed.herokuapp.com/
+
+Note: Since this is deployed to Heroku free-tier it can take some time to load, even report not responding, this is normal. Simply refresh or wait about 30 seconds.
+
+
+## Tutorial
+Login and select which game you're playing.
 
 ![Login](https://user-images.githubusercontent.com/42459707/112561197-d0550180-8e28-11eb-970d-b1c2468d619e.PNG)
 ![MainMenu](https://user-images.githubusercontent.com/42459707/112561304-0f835280-8e29-11eb-97ba-0c7994b67848.PNG)
