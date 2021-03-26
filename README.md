@@ -7,11 +7,21 @@ Simply login and select which game you're playing.
 ![MainMenu](https://user-images.githubusercontent.com/42459707/112561304-0f835280-8e29-11eb-97ba-0c7994b67848.PNG)
 
 2 of the 4 crewmates you havnt picked for the longest time will randomly be shown to you, you can re-shuffle these four with the spinning-arrow icon.
+
+![gameview](https://user-images.githubusercontent.com/42459707/112561397-3b063d00-8e29-11eb-814c-a1f3da283a9a.PNG)
+![Refresh](https://user-images.githubusercontent.com/42459707/112561399-3b9ed380-8e29-11eb-8d14-59893864069a.PNG)
+
 When you've made your selection, hit confirm and those 2 crew mates will be circulated to the back of the crew waitlist.
 
 You can add crew mates as you unlock them using the '+' icon and entering a name. By default they are sent to priority for a next pick.
+
+![Adding](https://user-images.githubusercontent.com/42459707/112561438-55d8b180-8e29-11eb-9925-068159cca436.PNG)
+
 If a crew member dies/leaves, select the 'show more' drop down and tap them to delete.
 
+![CewList](https://user-images.githubusercontent.com/42459707/112561468-65f09100-8e29-11eb-8382-97a8efef7d67.PNG)
+
+Every Add/Confirm/Delete is automatically saved to your profile.
 
 ## Why?
 I wanted to learn ReactJS, user-session and refine my continuous deployment skills.
