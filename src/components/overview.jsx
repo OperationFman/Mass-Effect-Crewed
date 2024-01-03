@@ -110,7 +110,7 @@ class Overview extends Component {
 	handleUpdateBackend = () => {
 		axios
 			.post(
-				`https://${process.env.BACKEND_API}/api/update/${this.props.userId}`,
+				`https://${process.env.REACT_APP_BACKEND_API}/api/update/${this.props.userId}`,
 				this.props.saveData,
 			)
 			.catch((err) => {

@@ -17,7 +17,9 @@ class KingContent extends Component {
 	componentDidMount() {
 		let userId = this.props.userId;
 		axios
-			.get(`https://${process.env.BACKEND_API}.herokuapp.com/api/get/${userId}`)
+			.get(
+				`https://${process.env.REACT_APP_BACKEND_API}.herokuapp.com/api/get/${userId}`,
+			)
 			.then((response) => {
 				this.setState({ saveData: response.data.userData });
 				this.setState({ content: "gameSelect" });
