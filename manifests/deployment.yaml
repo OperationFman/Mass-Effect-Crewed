@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: me-frontend
+  labels:
+    app: me-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: me-frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: me-frontend
+    spec:
+      containers:
+        - image: opfman/mass-effect-crewed:latest-fe
+          name: me-frontend
