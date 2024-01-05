@@ -1,4 +1,4 @@
-FROM node:15.8.0-alpine3.10 AS builder
+FROM --platform=linux/amd64 node:15.8.0-alpine3.10 AS builder
 
 WORKDIR /app
 COPY package*.json ./
